@@ -74,11 +74,11 @@ public class ChatViewModel extends AndroidViewModel {
                 new TypeToken<List<Map<String, Object>>>(){}.getType());
             
             sessions.clear();
-            for (HashMap<String, Object> sessionMap : sessionMaps) {
-                ChatSession session = ChatSession.fromMap(sessionMap);
-                if (session != null) {
-                    sessions.add(session);
-                }
+            for (Map<String, Object> sessionMap : sessionMaps) {
+               ChatSession session = ChatSession.fromMap(sessionMap);
+               if (session != null) {
+               sessions.add(session);
+              }
             }
             
             chatSessions.setValue(new ArrayList<>(sessions));
