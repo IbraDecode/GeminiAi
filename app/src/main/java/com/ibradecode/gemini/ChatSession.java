@@ -100,7 +100,7 @@ public class ChatSession {
         map.put("messages", messageMaps);
         
         // For backward compatibility with old format
-        map.put("history", com.google.gson.Gson().toJson(messageMaps));
+        map.put("history", new com.google.gson.Gson().toJson(messageMaps));
         
         return map;
     }

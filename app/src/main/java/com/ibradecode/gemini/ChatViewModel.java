@@ -69,8 +69,8 @@ public class ChatViewModel extends AndroidViewModel {
     public void loadChatSessions() {
         try {
             String sessionsJson = sharedPreferences.getString(HISTORY_KEY, "[]");
-            List<HashMap<String, Object>> sessionMaps = gson.fromJson(sessionsJson, 
-                new TypeToken<List<HashMap<String, Object>>>(){}.getType());
+            List<Map<String, Object>> sessionMaps = gson.fromJson(sessionsJson, 
+                new TypeToken<List<Map<String, Object>>>(){}.getType());
             
             sessions.clear();
             for (HashMap<String, Object> sessionMap : sessionMaps) {
@@ -236,7 +236,7 @@ public class ChatViewModel extends AndroidViewModel {
     
     private void saveChatSessions() {
         try {
-            List<HashMap<String, Object>> sessionMaps = new ArrayList<>();
+            List<Map<String, Object>> sessionMaps = new ArrayList<>();
             for (ChatSession session : sessions) {
                 sessionMaps.add(session.toMap());
             }

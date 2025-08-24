@@ -196,7 +196,7 @@ public class ChatActivity extends AppCompatActivity {
         }
         
         @Override
-        public int getViewType(int position) {
+        public int getItemViewType(int position) {
             return messages.get(position).isFromUser() ? VIEW_TYPE_USER : VIEW_TYPE_AI;
         }
         
