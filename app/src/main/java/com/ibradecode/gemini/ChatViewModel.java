@@ -19,6 +19,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class ChatViewModel extends AndroidViewModel {
     private static final String TAG = "ChatViewModel";
